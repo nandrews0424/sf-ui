@@ -1,0 +1,180 @@
+#home {
+	
+
+	.nav-tabs {
+		float:left;
+		margin-bottom: 10px;
+
+		& > li > a {
+			padding: 10px 100px 10px 20px;
+			border-radius: 0;
+			background: @gray-light;
+			border: solid 1px #e6e3e3;
+			margin:0;
+			color: @gray-darker;
+			font-weight:normal;
+			border-left: solid 1px @gray-light;
+			border-bottom: solid 1px @gray-light;
+		}
+
+		& > li.active {
+			a, a:hover, a:focus {
+				border-top: solid 2px @gray-dark;
+				background: #fff;
+				border-bottom: solid 1px transparent;
+				font-weight: 500;
+			}			
+		}
+	}
+
+
+
+	.project-list-filter {
+		position:relative;
+		.icon-remove-circle {
+			position: absolute;
+			right: 6px;
+			top: 5px;
+			color: #bbb;
+			font-size: 24px;
+			z-index: 1;
+			cursor: pointer;
+			&:hover {
+				color: @brand-primary;				
+			}
+		}
+	}
+
+	.active { color: #1D1D1D; }
+
+	.project .pin {
+		font-size: 16px;
+		vertical-align: middle;
+		&:hover {
+			cursor: pointer;
+			color: @brand-primary;
+		}
+	}
+
+	 .project-title {
+	 	color: @gray-dark;
+	 }
+
+	.filters {
+		margin: 20px 0 40px;
+	}
+
+	.stats .stat {
+		position:relative;
+		background: @gray;
+		text-align: center;
+		padding: 20px 0;
+		min-height: 60px;
+
+		.icon-upper-left {
+
+			position: absolute;
+			top: 8px;
+			left: 8px;
+			color: #aaa;
+			font-size: 18px;
+		}
+
+		.stat-label {
+			font-size: 12px;
+		}
+
+		.stat-val {
+			font-size: 24px;
+			line-height: 24px;
+			font-weight:bold;
+		}
+	}
+
+	.filters {
+		background: @gray;
+
+		li a { 
+			padding-left:0;
+			padding-right:0;
+			margin-left: 20px;
+			margin-right: 20px;
+			font-weight:bold;
+			color:#999;
+		}
+
+		li.active a {
+			color: #333;
+			border-bottom: solid 4px #333;
+			background:none;
+		}
+	}
+
+
+
+
+
+	.project-list {
+		border-left:none;
+		font-size: 12px;
+		
+		th {
+			border:none;
+			a {
+				text-decoration: none;
+			}
+
+			&.contact, &.research-manager, &.client {
+				min-width: 120px;
+				max-width: 180px;
+			}
+		}
+
+		thead {
+			border: none;
+			background: #e8e8e8;
+			font-weight: bold;
+			color: #717171;
+			font-size: 12px;
+		}
+
+		td {
+			background: #f5f5f5;
+
+			&.contact, &.research-manager, &.client {
+				min-width: 120px;
+				max-width: 180px;
+			}
+		}
+
+		
+		.stat {
+			vertical-align: middle;
+			text-align: center;
+			color: #999;
+			font-weight: bold;
+			width: 50px;
+
+			&.zero {
+				color: #ccc;
+			}
+		}
+
+		td.stat:hover {
+			color:#fff;
+			background: @brand-primary;
+			cursor:pointer;
+		}
+
+		.contact-card {
+			font-size:16px; 
+			margin-left: 8px; 
+			line-height: 22px;
+			&:hover {
+				i { color: #555; }
+				cursor: pointer;
+			}
+		}
+
+	}
+}

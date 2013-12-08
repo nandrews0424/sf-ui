@@ -1,0 +1,93 @@
+@import "bootstrap/less/bootstrap";
+@import "font-awesome/less/font-awesome";
+@import "theme";
+@import "home";
+@import "bridge";
+
+html{
+  overflow-y:scroll;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body.modal-open {
+	overflow:hidden;
+}
+
+#app {
+  position:relative;
+
+  #main {
+     width:100%;
+     height:100%;
+  }  
+}
+
+.load-mask {
+	position:fixed; 
+	top:60px; // could make this 0 to stop header from being interactive during loading...
+	left:0; 
+	right:0;
+	bottom:0;
+	color:#333;
+	z-index: 10;
+
+	.inner {
+		position:fixed;
+		top: 60px;
+		left:0;
+		right:0;
+		bottom:0;
+		background: #fff;
+	}
+
+	/* Allows quick fade transition for initial load */
+	opacity: 1;
+   	transition: opacity .1s ease-in-out;
+   	-moz-transition: opacity .1s ease-in-out;
+   	-webkit-transition: opacity .1s ease-in-out;
+    &.fade-out { 
+    	opacity: 0; 
+    }
+    &.removed {
+        display:none;
+    }
+
+	.load-indicator {
+		position:absolute;
+		right:0;
+		bottom:0;
+		width:100px;
+		height:100px;
+		text-align:center;
+
+		opacity: .1;
+	   	transition: opacity .4s ease-in-out;
+	   	-moz-transition: opacity .4s ease-in-out;
+	   	-webkit-transition: opacity .4s ease-in-out;
+
+	   	&.loaded {
+	   		opacity: 0;
+	   	}
+
+	   	&.loading {
+	   		opacity: .1;
+	   	}
+	}
+
+	.error {
+		opacity: .75;
+		position:absolute;
+		right:0;
+		bottom:0;
+		width:300px;
+		padding-right: 30px;
+		height:80px;
+		text-align:right;
+
+	}
+}
+

@@ -1,0 +1,13 @@
+
+<div class="load-mask" ng-class="{'fade-out': pageLoad, 'removed': loadFadeComplete }">
+	<div class="inner">
+		<div class="load-indicator" ng-hide="pageError" ng-class="{'loading': !pageLoad, 'loaded': pageLoad }" >
+			<img style="width:80px; height:80px;" src="/img/loading.gif" />
+		</div>
+		<div class="error" ng-hide="!pageError">
+			<i class="icon-warning-sign icon-3x pull-right"></i>
+			<h4 style="margin:6px 0 0; line-height: 15px">Something didn't work</h4>
+			<a href="javascript:location.reload(true)"><i class="icon-refresh"></i> Try again?</a>
+		</div>
+	</div>
+</div>
