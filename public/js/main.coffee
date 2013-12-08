@@ -41,3 +41,24 @@ require "./services/audio.coffee"
 
 app.run ($rootScope) ->
 	angular.extend($rootScope,config)
+
+
+
+# todo: for testing, remove when further along w/ content.....
+window.lorem = (min=25,max=125) ->
+	text = [
+		"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium",
+		"Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta",
+		"Sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia",
+		"Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui",
+		"Dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora"
+	]
+	
+	t = _.sample(text)
+	while t.length < max
+		t += _.sample(text)
+
+	if t.length > max
+		t = t.substring(0,_.random(min,max))
+
+	t

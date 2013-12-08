@@ -50,12 +50,51 @@
 				</div>
 
 
+				<table class="table sf-table">
 
+					<thead>
+						<tr>
+							<th colspan="2" class="gradient-bg xs">
+								Tools
+							</th>
 
+							<th class="type gradient-bg xs inverted">
+								Type <i class="icon-angle-down"></i>
+							</th>
+							<th class="separator">
+								<div class="notch"></div>
+								<div class="line"></div>
+							</th>
+							<th class="gradient-bg left">
+								Description
+							</th>
+							<th class="amount gradient-bg xs inverted">
+								Amount
+							</th>
+						</tr>
+					</thead>
+					<tbody>
 
+						<tr ng-repeat="item in inventory">
+							<td>
+								<div checkbox ng-model="selected"></div>
+							</td>
+							<td>
+								<!-- filter tools -->
+							</td>
+							<td class="type">
+								{{item.type}}
+							</td>
+							<td class="separator"><div class="line"></div></td>
+							<td>{{item.description}}</td>
+							<td class="amount">
+								{{item.amount}} <i class="icon-euro"></i>
+							</td>
+						<tr/>
 
+					</tbody>
 
-
+				</table>
 			</section>
 
 
@@ -75,23 +114,13 @@
 			<!-- Right Aside -->
 			<section class="col-lg-3">
 				<ul class="notifications">
-
-					<li>
-						<h5>New cargo ready for distribution</h5>
+					<li ng-repeat="item in notifications">
+						<h5>{{item.title}}</h5>
 						<p class="muted">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et ...
+							{{item.detail}}
 						</p>
 						<div class="notch"></div>
 					</li>
-
-					<li class="gradient-bg">
-						<h5>New weapon upgrades available</h5>
-						<p class="muted">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna... 
-						</p>
-						<div class="notch"></div>						
-					</li>
-
 				</ul>
 
 
